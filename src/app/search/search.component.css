@@ -1,0 +1,12 @@
+.searchTxt {
+    width :20rem;
+    height: 2rem;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+
+.searchBtn {
+    width :5rem;
+    height: 2rem;
+    border-radius: 2rem;
+}

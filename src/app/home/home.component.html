@@ -1,0 +1,23 @@
+<app-search></app-search>
+
+<ul>
+    <li *ngFor="let food of foods">
+        <a (click)="openProperty(food.id,dialog)">
+            <img src="{{food.imageUrl}}" >
+            <div class="content">
+                <div class="name">
+                    {{food.name}}
+                </div>
+                <span class="favoutite {{food.favorite}}?'red':'not'"> ♥</span>
+                <span style="float: right;">Price ${{food.price}}</span>
+            </div>
+        </a>
+        
+    </li>
+</ul>
+
+
+<dialog #dialog>
+    <app-cart *ngIf="showProp"></app-cart>
+   <!-- <app-foodpage  *ngIf="showProp" [id]="selectedFoodId" (saveFood)="updateFood($event)"></app-foodpage> -->
+</dialog>

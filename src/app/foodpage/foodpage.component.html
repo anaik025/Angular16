@@ -1,0 +1,11 @@
+<form [formGroup]="foodForm" (onSubmit)="save()">
+    <div class="container">
+        <div>Id: </div><input type="text" formControlName="id" />
+        <div>Name: </div><input type="text" formControlName="name" [class.invalid]="foodForm.get('name')?.invalid"/>
+        <div>Price</div><input type="text" formControlName="price" />
+    </div>
+    <div>
+        <input type="button" value="cancel" (click)="cancel()" />
+    </div>
+</form>
+
