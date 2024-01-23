@@ -1,0 +1,37 @@
+div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+.itembox {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    color: #727272;
+    flex-direction: column;
+}
+
+.itembox img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.itembox:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+html {
+    font-size: 14px;
+}
+
+.content {
+ padding:2px;
+ position: relative;
+}

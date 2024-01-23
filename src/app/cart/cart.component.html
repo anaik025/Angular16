@@ -1,5 +1,19 @@
-<p>cart works!</p>
+<div class="header">Cart</div>
 
-<ng-container #container>
-
-</ng-container>
+<div class="itembox" *ngFor="let item of cartItems">
+    
+    <img src="{{item.food.imageUrl}}" >
+    <div class="content">
+        <div class="name">
+            {{item.food.name}}
+        </div>
+        <span> Quantity </span><input type="inbox" [(ngModel)]="item.quantity" />
+        <span style="float: right;">Price per Item ${{item.food.price}}</span>
+        <span style="float: right;">Price ${{item.price}}</span>
+       
+    </div>
+    
+</div>
+<div>
+    Total Amount: {{total}}
+</div>

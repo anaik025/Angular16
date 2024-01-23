@@ -10,14 +10,14 @@
                 </div>
                 <span class="favoutite {{food.favorite}}?'red':'not'"> ♥</span>
                 <span style="float: right;">Price ${{food.price}}</span>
+                
             </div>
         </a>
-        
+        <input type="button" value="Add To Cart" (click)="addToCart(food)"/>
     </li>
 </ul>
 
 
 <dialog #dialog>
-    <app-cart *ngIf="showProp"></app-cart>
-   <!-- <app-foodpage  *ngIf="showProp" [id]="selectedFoodId" (saveFood)="updateFood($event)"></app-foodpage> -->
+    <app-dialog *ngIf="showProp"></app-dialog>  
 </dialog>

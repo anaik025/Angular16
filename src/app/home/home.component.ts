@@ -4,6 +4,7 @@ import { Foods } from '../shared/model/food';
 import { ActivatedRoute } from '@angular/router';
 import { MessagingService } from '../services/messaging/messaging.service';
 import { Subscription } from 'rxjs';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,7 @@ export class HomeComponent implements OnInit {
     @ViewChild('dialog') dialog!:ElementRef<any>;
 
     constructor(private fs:FoodService, private router:ActivatedRoute,
-      private messaging:MessagingService){
+      private messaging:MessagingService, private cartService:CartService){
 
     }
 
@@ -54,5 +55,9 @@ export class HomeComponent implements OnInit {
         this.showProp=false;
         this.dialog.nativeElement.close();
         
+      }
+
+      addToCart(food:Foods){
+        this.cartService.addToCart(food);
       }
 }
