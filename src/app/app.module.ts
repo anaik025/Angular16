@@ -9,6 +9,7 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FoodpageComponent } from './foodpage/foodpage.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DialogComponent } from './dialog/dialog.component';
     HomeComponent,
     SearchComponent,
     FoodpageComponent,
-    DialogComponent
+    DialogComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

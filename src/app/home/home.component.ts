@@ -58,6 +58,7 @@ export class HomeComponent implements OnInit {
       }
 
       addToCart(food:Foods){
+        sessionStorage.setItem("added","yes");
         this.cartService.addToCart(food);
       }
 }
